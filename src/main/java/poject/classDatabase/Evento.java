@@ -11,6 +11,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -22,8 +24,10 @@ import poject.classDatabase.enums.EventoTipo;
 @Entity
 @Getter
 @Setter
-
+@Inheritance(strategy = InheritanceType.JOINED)
 @NoArgsConstructor
+//@NamedQuery(name = "getPartecipazioniDaConfermarePerEvento", query = "SELECT e   ")
+
 public class Evento {
 
 	@Override
